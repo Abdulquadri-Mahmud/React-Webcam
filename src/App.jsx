@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import Webcam from "react-webcam";
 
 
@@ -24,6 +25,8 @@ function App() {
   return (
     <>
       <p>React Webcam</p>
+
+      <Link to={'/webcam'}>Second webcam</Link>
 
       <Webcam ref={webRef} videoConstraints={videoConstraints} audio={false}/>
 
