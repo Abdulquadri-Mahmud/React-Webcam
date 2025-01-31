@@ -5,6 +5,7 @@ import Webcam from "react-webcam";
 function App() {
   const webRef = useRef(null);
   const [img, setImg] = useState(null);
+  const [isCameraOn, setIsCameraOn] = useState(false);
 
   const videoConstraints = {
     width: 300,
@@ -24,7 +25,7 @@ function App() {
     <>
       <p>React Webcam</p>
 
-      <Webcam ref={webRef} videoConstraints={videoConstraints}/>
+      <Webcam ref={webRef} videoConstraints={videoConstraints} audio={false}/>
 
       <button onClick={() => {showImage()}}>Show Image in console</button>
       <div className="img">
